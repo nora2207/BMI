@@ -156,7 +156,7 @@ function update(item){
         }else{
             set = '過輕';
         };
-        str += '<li class="bar '+ BMIcolor[set].class +'"><span class="listLevel">'+ item[i].level +'</span>'+'BMI'+'<div class="BMI">'+ item[i].BMI +'</div>'+'weight'+'<div class="weight">'+ item[i].weight +'kg' +'</div>'+'height'+'<div class="height">'+ item[i].height +'cm' +'</div><div class="time">'+ item[i].time +'</div></li>'
+        str += '<li class="bar '+ BMIcolor[set].class +'"><span class="listLevel">'+ item[i].level +'</span>'+'<span class="BMI1">'+'BMI'+'</span>'+'<div class="BMI">'+ item[i].BMI +'</div>'+'<span class="weight1">'+'weight'+'</span>'+'<div class="weight">'+ item[i].weight +'kg' +'</div>'+'<span class="height1">'+'height'+'</span>'+'<div class="height">'+ item[i].height +'cm' +'</div><div class="time">'+ item[i].time +'</div></li>'
     }
     list.innerHTML = str;
 }
@@ -173,105 +173,3 @@ function clean(e){
     localStorage.setItem('bmiData', JSON.stringify(data));
     update(data);
 }
-
-
-
-
-//-----------------------------------------------------------------------
-
-//'+ BMIColor[level].class +'
-
-
-//變更btn樣式
-// function newBtn(BMI,level){
-//     ChangeBtn.classList.add('hidebtn');
-//     stateBtn.classList.remove('hidebtn');
-//     btnArea.addEventListener('click',function(e){
-//         if(e.target.className == 'result-btn'){
-//             var bminb = document.querySelector('.bmi-nb');
-//             var statustext = document.querySelector('.status-text');
-//             btnArea.setAttribute('class','+ BMIColor[status].class +');
-//             bminb.textContent = 'bmi';
-//             statustext.textContent = 'level';
-//         }        
-//     })
-// }
-// 
-// var btnArea = document.querySelector('.btnArea');
-// 
-// var cleanHistory = document.querySelector('.cleanHistory');
-// 
-
-//監聽
-// cleanHistory.addEventListener('click',clean,false);
-
-//載入歷史資料
-// updateList(data);
-
-//btn總控制
-// function action(){
-//     var cm = document.querySelector('.textHeight').value;
-//     var kg = document.querySelector('.textWeight').value;
-//     calculate(cm,kg);
-//     changeBtn();
-//     addData(cm,kg);
-//     updateList(data);
-// }
-
-//計算BMI
-// function calculate(cm,kg){
-//     var BMIResult = kg/((cm/100)*(cm/100));
-//     BMI = Math.round(BMIResult * 100) / 100;
-//     //判斷BMI指標
-//     if (BMI>=35){
-//         judge = '重度肥胖';
-//     } else if (BMI>=30){
-//         judge = '中度肥胖';
-//     } else if (BMI>=27){
-//         judge = '輕度肥胖';
-//     } else if (BMI>=24){
-//         judge = '過重';
-//     } else if (BMI>=18.5){
-//         judge = '理想';
-//     } else {
-//         judge = '過輕';
-//     } 
-// }
-
-//取得今天日期
-// function today() {
-//     var today = new Date();
-//     var time = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate()
-//     return time;
-// }
-
-//建立JSON&存入localStorage
-// function addData(cm,kg) {
-//     var totalResult = {
-//         height: cm,
-//         weight: kg,
-//         BMI: BMI,
-//         judge: judge,
-//         time: today()
-//     }
-//     data.push(totalResult);
-//     localStorage.setItem('BMI', JSON.stringify(data));
-// }
-
-//更新網頁內容
-// function updateList(data){
-//     var str = '';
-//     var len = data.length;
-//     for(i=0;i<len;i++){
-//         str += '<li data-num="'+ i +'">BMI'+ result +' weight'+ kg +'height'+cm+'</li>'
-//     }
-//     list.innerHTML = str;
-//     //變更列表顏色
-    
-// }
-
-//變更btn樣式
-// function changeBtn() {}
-
-//刪除
-// function clean(){}

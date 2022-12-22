@@ -195,6 +195,43 @@ table {
 .result-green{
     background-color: #86D73E;
 }
+@media (max-width: 768px){
+    .header{
+        display: block;
+        padding: 0;
+        height: 380px;
+        display: flex;
+        flex-direction: column;
+    }
+    .logo{
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+    .logo img{
+        height: 80px;
+        width: 80px;
+    }
+    .text{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .text input{
+        width: 180px;
+        margin-bottom: 10px;
+    }
+    .text .textWeight{
+        width: 185px;
+    }
+    .btnArea{
+        padding-bottom: 10px;
+    }
+    .status-text{
+        font-size: 24px;
+        width: 100px;
+        right: -120px;
+    }
+}
+
 
 /*---------- 中間 BMI 紀錄 ----------*/
 .content{
@@ -225,7 +262,6 @@ h2{
     width: 640px;
     height: 62px;
     background: #fff;
-    margin-bottom: 10px;
     line-height: 62px;
     font-size: 12px;
     margin-bottom: 20px;
@@ -280,6 +316,66 @@ h2{
     font-size: 12px;
 }
 
+@media (max-width: 768px){
+    h2{
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    .bar{
+        width: 350px;
+        height: 140px;
+        line-height: 62px;
+        display: block;
+        position: relative;
+    }
+    .list div{
+        font-size: 20px;
+        padding-left: 5px;
+        padding-right: 40px;
+    }
+    .listLevel{
+        position: absolute;
+        top: 40px;
+    }
+    .BMI1{
+        position: absolute;
+        top: -5px;
+        left: 140px;
+    }
+    .BMI{
+        position: absolute;
+        top: 20px;
+        left: 135px;
+    }
+    .weight1{
+        position: absolute;
+        top: -5px;
+        left: 240px;
+    }
+    .weight{
+        position: absolute;
+        top: 20px;
+        left: 235px;
+    }
+    .height1{
+        position: absolute;
+        top: 60px;
+        left: 140px;
+    }
+    .height{
+        position: absolute;
+        top: 85px;
+        left: 135px;
+    }
+    .time{
+        position: absolute;
+        top: 75px;
+        left: 235px;
+    }
+}
+
+
+
 /*---------- 表尾 ----------*/
 .footer{
     background: #FFD366;
@@ -298,4 +394,4 @@ h2{
 
 /*{
     outline:1px solid #000
-  }
+}
