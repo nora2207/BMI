@@ -199,13 +199,13 @@ table {
     .header{
         display: block;
         padding: 0;
-        height: 380px;
+        height: 350px;
         display: flex;
         flex-direction: column;
     }
     .logo{
         padding-top: 20px;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
     }
     .logo img{
         height: 80px;
@@ -214,13 +214,17 @@ table {
     .text{
         margin-left: 0;
         margin-right: 0;
+        display: flex;
     }
     .text input{
-        width: 180px;
+        width: 140px;
         margin-bottom: 10px;
     }
-    .text .textWeight{
-        width: 185px;
+    .heightArea{
+        margin-right: 10px;
+    }
+    .weightArea{
+        margin-left: 10px;
     }
     .btnArea{
         padding-bottom: 10px;
